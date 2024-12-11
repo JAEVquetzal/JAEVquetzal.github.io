@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto de Aprendizaje Contra La Violencia En El Aula</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            Objeto de Aprendizaje Contra La Violencia En El Aula
+        </header>
+
+        <div class="content">
+            <div class="block">
+                <h2 class="block-title">Inicio</h2>
+                <!-- Se eliminó el text-box -->    
+            </div>
+            <div class="block">
+                <h2 class="block-title">Objetivo General</h2>
+                <div class="text-box">
+                    <table class="new-block-table">
+                        <tr>
+                            <td class="left-column">
+                                <p>Desarrollar un objeto de aprendizaje dirigido a profesores que les permita identificar y manejar situaciones de violencia en el aula mediante el uso de estrategias pedagógicas y recursos tecnológicos, con el propósito de promover un ambiente de aprendizaje seguro y respetuoso.</p>
+                            </td>
+                            <td class="right-column">
+                                <figure>
+                                    <img src="Images/imagen_objetivo_general.png" alt="Nueva Imagen" class="block-image">
+                                    <figcaption>Imagen 1. Ilustración de la capacitación docente contra la violencia en las escuelas. Generada por Microsoft Designer, 2024.</figcaption>
+                                </figure>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- Nuevo bloque añadido aquí -->
+            <div class="block">
+                <h2 class="block-title">Objetivos Específicos</h2>
+                <div class="text-box">
+                    <table class="new-block-table">
+                        <tr>
+                            <td class="left-column">
+                                <figure>
+                                    <img src="Images/imagen_objetivo_oa.png" alt="Imagen relacionada con el objetivo del OA" class="block-image">
+                                    <figcaption>Imagen 2. Ilustración de la capacitación docente contra la violencia en las escuelas. Generada por Microsoft Designer, 2024.</figcaption>
+                                </figure>
+                            </td>
+                            <td class="right-column">
+                                <ul>
+                                    <li>Identificar de forma temprana signos de violencia tanto física, como psicológica, y verbal entre los estudiantes en el aula.</li>
+                                    <li>Reconocer algunas estrategias de prevención y actuación oportuna en situaciones de violencia dentro del aula.</li>
+                                    <li>Promover ambientes armónicos y de respeto propicios para el aprendizaje.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- Fin del nuevo bloque -->
+            <div class="block">
+                <!-- Se eliminó el "Block-title" -->
+                <div class="text-box">
+                    <!-- Se eliminó el <img src="Images/imagen_objetivo_oa.png" alt="Imagen relacionada con el objetivo del OA" class="right-image"> -->
+                    La violencia es un fenómeno complejo y multifacético que puede manifestarse de diversas maneras en el entorno escolar. Entender los conceptos básicos sobre la violencia es esencial para identificarla, prevenirla y erradicarla.
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation-buttons">
+            <button class="button" onclick="window.location.href='conceptos.html'">Siguiente</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const blocks = document.querySelectorAll(".block");
+
+            // Función para mostrar los bloques de manera secuencial
+            function showBlocksSequentially(blocks, index) {
+                if (index >= blocks.length) return;
+
+                const block = blocks[index];
+                block.style.opacity = 0; // Aseguramos que el bloque esté oculto
+                block.style.transition = "opacity 1s ease-in-out"; // Definimos la transición
+
+                // Mostramos el bloque después de un breve retraso
+                setTimeout(() => {
+                    block.style.opacity = 1;
+                    showBlocksSequentially(blocks, index + 1);
+                }, 1000); // Ajusta el retraso según lo necesites
+            }
+
+            // Inicia la secuencia de mostrar bloques
+            showBlocksSequentially(blocks, 0);
+        });
+
+        // Funcionalidad para el botón "Siguiente"
+        document.querySelector(".button").addEventListener("click", function() {
+            window.location.href = 'Pages/Conceptos/Conceptos.html';
+        });
+    </script>
+</body>
+</html>
